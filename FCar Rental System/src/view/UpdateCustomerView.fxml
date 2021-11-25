@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomerController">
+   <children>
+      <HBox alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="52.0" prefWidth="672.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="34.0" prefWidth="189.0" text="Update Customer">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutX="6.0" layoutY="64.0" prefHeight="464.0" prefWidth="672.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="64.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" prefHeight="20.0" prefWidth="100.0" text="Customer ID">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="50.0" prefHeight="20.0" prefWidth="100.0" text="Name">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="87.0" prefHeight="20.0" prefWidth="100.0" text="Phone">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="124.0" prefHeight="20.0" prefWidth="100.0" text="Address">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="160.0" prefHeight="20.0" prefWidth="100.0" text="Nationality">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="196.0" prefHeight="20.0" prefWidth="100.0" text="Driving License">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="264.0" prefHeight="20.0" prefWidth="100.0" text="Passport No">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="304.0" prefHeight="20.0" prefWidth="100.0" text="Entry Date">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="345.0" prefHeight="20.0" prefWidth="100.0" text="Visa Expiry Date">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="23.0" layoutY="382.0" prefHeight="20.0" prefWidth="100.0" text="Qatar ID">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="customerTf" layoutX="149.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Customer ID" />
+            <TextField fx:id="nameTf" layoutX="149.0" layoutY="46.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Name" />
+            <TextField fx:id="phoneTf" layoutX="149.0" layoutY="83.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Phone Number" />
+            <TextField fx:id="addressTf" layoutX="149.0" layoutY="120.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Address" />
+            <TextField fx:id="nationalityTf" layoutX="149.0" layoutY="156.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Nationality" />
+            <TextField fx:id="drivingTf" layoutX="149.0" layoutY="193.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Driving License" />
+            <TextField fx:id="passportTf" layoutX="149.0" layoutY="261.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Enter Passport Number (If Vistor)" />
+            <DatePicker fx:id="entryDateTf" layoutX="149.0" layoutY="301.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Choose Entry Date (If Visitor)" />
+            <DatePicker fx:id="expiryDateTf" layoutX="149.0" layoutY="343.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" promptText="Choose Expiry Date (If Visitor)" />
+            <TextField fx:id="qatarIdTf" layoutX="149.0" layoutY="380.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Enter Qatar ID (If Resident)" />
+            <HBox alignment="CENTER_LEFT" layoutX="149.0" layoutY="443.0" prefHeight="46.0" prefWidth="400.0" spacing="60.0">
+               <children>
+                  <Button fx:id="updateBtn" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUpdate" prefWidth="150.0" text="Update" />
+                  <Button fx:id="cancelBtn" cancelButton="true" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancel" prefWidth="150.0" text="Cancel" />
+               </children>
+            </HBox>
+            <RadioButton fx:id="isResident" layoutX="207.0" layoutY="233.0" mnemonicParsing="false" selected="true" text="Resident">
+               <toggleGroup>
+                  <ToggleGroup fx:id="custType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="isVisitor" layoutX="380.0" layoutY="233.0" mnemonicParsing="false" text="Visitor" toggleGroup="$custType" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
